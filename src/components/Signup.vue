@@ -1,5 +1,5 @@
 <template>
-  <img class="logo" alt="Vue logo" src="./assets/logo.png" />
+  <img class="logo" alt="Vue logo" src="../assets/logo.png" />
   <h1>Sign Up</h1>
   <div class="register">
     <input type="text" v-model="name" placeholder="Enter Your Name" />
@@ -30,12 +30,12 @@ export default {
         email: this.email,
         password: this.password
       })
-      if (response.status == 200) {
+      if (response.status == 201) {
         alert('Signed up!')
         localStorage.setItem('userInfo', JSON.stringify(response.data))
         this.$router.push({ name: 'Home-Page' })
       } else {
-        alert('Failed! Make sure to c<heck that the data entered is correct.')
+        alert('Failed! Make sure to check that the data entered is correct.')
       }
     }
   }

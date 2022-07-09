@@ -3,7 +3,7 @@ import Signup from "./components/Signup.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-  { name: "Home", component: Home, path: "/" },
+  { name: "Home-Page", component: Home, path: "/" },
   { name: "Signup", component: Signup, path: "/signup" },
 ];
 

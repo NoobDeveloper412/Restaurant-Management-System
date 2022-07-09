@@ -1,3 +1,22 @@
 {
-  "user": [{ "name": "John", "password": "30", "email": "bruh@gmail.com" }]
+  "user": [
+    {
+      "name": "Alfred Jamil",
+      "email": "alimuhammad4lala@gmail.com",
+      "password": "akudsf",
+      "id": 1
+    },
+    {
+      "name": "Ali",
+      "email": "Ali@gmail.com",
+      "password": "fasdfa",
+      "id": 2
+    },
+    {
+      "name": "alsdnf",
+      "email": "lanksdf",
+      "password": "lskdnf",
+      "id": 3
+    }
+  ]
 }
