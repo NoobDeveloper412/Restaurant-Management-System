@@ -1,31 +1,30 @@
 <template>
   <img class="logo" alt="Vue logo" src="../assets/logo.png" />
-  <h1>Sign Up</h1>
-  <div class="register">
-    <input type="text" v-model="name" placeholder="Enter Your Name" />
+  <h1>Sign In</h1>
+  <div class="signin">
     <input type="email" v-model="email" placeholder="Email" />
     <input type="password" v-model="password" placeholder="Password" />
-
-    <button v-on:click="signup">
-      Signup
+    <button v-on:click="signin">
+      Signin
     </button>
-    <p><router-link to="/signin"> Already loggedin?</router-link></p>
+    <p>
+      <router-link to="/signup"> Create an account</router-link>
+    </p>
   </div>
 </template>
 <script>
 import axios from 'axios'
 
 export default {
-  name: 'SignUp',
+  name: 'SignIn',
   data () {
     return {
-      name: '',
       email: '',
       password: ''
     }
   },
   methods: {
-    async signup () {
+    async signin () {
       let response = await axios.post('http://localhost:3000/user', {
         name: this.name,
         email: this.email,
@@ -39,12 +38,6 @@ export default {
         alert('Failed! Make sure to check that the data entered is correct.')
       }
     }
-  },
-  mounted () {
-    let user = localStorage.getItem('userInfo')
-    if (user) {
-      this.$router.push({ name: 'Home-Page' })
-    }
   }
 }
 </script>
@@ -55,7 +48,7 @@ export default {
   height: 100px;
   margin: 20px auto;
 }
-.register input {
+.signin input {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -65,7 +58,7 @@ export default {
   border: 1px solid skyblue;
   display: block;
 }
-.register button {
+.signin button {
   width: 320px;
   height: 40px;
   background: skyblue;

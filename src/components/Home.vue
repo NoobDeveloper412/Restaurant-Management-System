@@ -3,12 +3,16 @@
   <h1>Hello from Home</h1>
 </template>
 
-
 <script>
 export default {
-  name: 'Home-Page'
+  name: 'Home-Page',
+  mounted () {
+    let user = localStorage.getItem('userInfo')
+    if (!user) {
+      this.$router.push({ name: 'SignIn' })
+    }
+  }
 }
 </script>
 
-<style>
-</style>
+<style></style>
