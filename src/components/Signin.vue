@@ -23,7 +23,7 @@ export default {
       password: ''
     }
   },
-   mounted () {
+  mounted () {
     let user = localStorage.getItem('userInfo')
     if (user) {
       this.$router.push({ name: 'Home-Page' })
