@@ -17,6 +17,12 @@
       "email": "lanksdf",
       "password": "lskdnf",
       "id": 3
+    },
+    {
+      "name": "ali",
+      "email": "bruh@gmail.com",
+      "password": "bruh",
+      "id": 4
     }
   ]
 }

@@ -23,19 +23,24 @@ export default {
       password: ''
     }
   },
+   mounted () {
+    let user = localStorage.getItem('userInfo')
+    if (user) {
+      this.$router.push({ name: 'Home-Page' })
+    }
+  },
   methods: {
     async signin () {
-      let response = await axios.post('http://localhost:3000/user', {
-        name: this.name,
-        email: this.email,
-        password: this.password
-      })
-      if (response.status == 201) {
-        alert('Signed up!')
+      let response = await axios.get(
+        `http://localhost:3000/user?email=${this.email}&password=${this.password}`
+      )
+      console.log(response)
+      if (response.data.length != 0) {
+        alert('Logged in!')
         localStorage.setItem('userInfo', JSON.stringify(response.data))
         this.$router.push({ name: 'Home-Page' })
       } else {
-        alert('Failed! Make sure to check that the data entered is correct.')
+        alert('Invalid email or password.')
       }
     }
   }
