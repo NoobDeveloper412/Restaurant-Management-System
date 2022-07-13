@@ -1,9 +1,9 @@
 <template>
   <div class="navbar">
-    <a href="/">Home</a>
-    <a href="/add">Add Restaurant</a>
-    <a href="/update">Update Restaurant</a>
-    <a href="#" v-on:click="logout">Logout</a>
+    <router-link to="/">Home</router-link>
+    <router-link to="/add">Add Restaurant</router-link>
+    <router-link to="/update">Update Restaurant</router-link>
+    <router-link to="#" v-on:click="logout">Logout</router-link>
   </div>
 </template>
 

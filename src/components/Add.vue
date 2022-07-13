@@ -1,24 +1,18 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <Header />
-  <h1>Hello {{ name }} from Home</h1>
+  <h1>Hello from Add Page</h1>
 </template>
 
 <script>
 import Header from './Header.vue'
 export default {
-  name: 'Home-Page',
-  data () {
-    return {
-      name: ''
-    }
-  },
+  name: 'Add-Page',
   components: {
     Header
   },
   mounted () {
     let user = localStorage.getItem('userInfo')
-    this.name = JSON.parse(user)[0].name
     if (!user) {
       this.$router.push({ name: 'SignIn' })
     }
