@@ -55,7 +55,7 @@ export default {
   height: 100px;
   margin: 20px auto;
 }
-.register input {
+.register input ,.add_form input {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -65,7 +65,7 @@ export default {
   border: 1px solid skyblue;
   display: block;
 }
-.register button {
+.register button, .add_form button {
   width: 320px;
   height: 40px;
   background: skyblue;
