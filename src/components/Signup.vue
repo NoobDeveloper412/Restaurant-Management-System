@@ -1,5 +1,5 @@
 <template>
-  <img class="logo" alt="Vue logo" src="../assets/logo.png" />
+  <!-- <img class="logo" alt="Vue logo" src="../assets/logo.png" /> -->
   <h1>Sign Up</h1>
   <div class="register">
     <input type="text" v-model="name" placeholder="Enter Your Name" />
