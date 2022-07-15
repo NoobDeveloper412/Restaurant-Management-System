@@ -9,7 +9,7 @@
     <button v-on:click="signup">
       Signup
     </button>
-    <p><router-link to="/signin"> Already loggedin?</router-link></p>
+    <p><router-link to="/signin">Already loggedin?</router-link></p>
   </div>
 </template>
 <script>
