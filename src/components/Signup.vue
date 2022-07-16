@@ -36,7 +36,7 @@ export default {
         localStorage.setItem('userInfo', JSON.stringify(response.data))
         this.$router.push({ name: 'Home-Page' })
       } else {
-        alert('Failed! Make sure to check that the data entered is correct.')
+        alert('Failed! Invalid credentials.')
       }
     }
   },
