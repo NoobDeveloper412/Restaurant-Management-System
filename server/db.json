@@ -31,24 +31,5 @@
       "id": 5
     }
   ],
-  "restaurant": [
-    {
-      "name": "Burger ads",
-      "address": "123 Main St",
-      "contact": "12345678",
-      "id": 1
-    },
-    {
-      "name": "a;odjif",
-      "address": "lkjsaddflk",
-      "contact": "j",
-      "id": 2
-    },
-    {
-      "name": "laksdmf",
-      "address": "lkasjdf",
-      "contact": "l;kjasdf",
-      "id": 3
-    }
-  ]
+  "restaurant": []
 }
