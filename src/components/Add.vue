@@ -2,11 +2,7 @@
 <template>
   <Header />
   <h1>Hello from Add Page</h1>
-  <form
-    action="#"
-    v-on:submit="addRestaurant($event)"
-    class="add_form"
-  >
+  <form action="#" v-on:submit="addRestaurant($event)" class="add_form">
     <input
       type="text"
       name="name"
@@ -31,6 +27,8 @@
 
 <script>
 import Header from './Header.vue'
+import Axios from 'axios'
+
 export default {
   name: 'Add-Page',
   components: {
@@ -46,10 +44,17 @@ export default {
     }
   },
   methods: {
-    addRestaurant (event) {
-      event.preventDefault();
-    
-      console.log(this.restaurant)
+    async addRestaurant (event) {
+      event.preventDefault()
+      const result = await Axios.post('http://localhost:3000/restaurant', {
+        name: this.restaurant.name,
+        address: this.restaurant.address,
+        contact: this.restaurant.contact
+      })
+      console.log(result)
+      if (result.status == 201) {
+        this.$router.push({ name: 'Home-Page' })
+      }
     }
   },
   mounted () {
