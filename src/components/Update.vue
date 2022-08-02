@@ -43,15 +43,18 @@ export default {
     }
   },
   methods: {
-    async addRestaurant (event) {
+    async updateRestaurant (event) {
       event.preventDefault()
-      const result = await Axios.post('http://localhost:3000/restaurant', {
-        name: this.restaurant.name,
-        address: this.restaurant.address,
-        contact: this.restaurant.contact
-      })
+      const result = await Axios.put(
+        'http://localhost:3000/restaurant/' + this.$route.params.id,
+        {
+          name: this.restaurant.name,
+          address: this.restaurant.address,
+          contact: this.restaurant.contact
+        }
+      )
       console.log(result)
-      if (result.status == 201) {
+      if (result.status == 200) {
         this.$router.push({ name: 'Home-Page' })
       }
     }

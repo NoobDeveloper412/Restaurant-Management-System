@@ -33,10 +33,10 @@
   ],
   "restaurant": [
     {
-      "id": 1,
-      "name": "Burger King",
-      "contact": 123456789,
-      "address": "123 Main St"
+      "name": "Burger ads",
+      "address": "123 Main St",
+      "contact": "12345678",
+      "id": 1
     },
     {
       "name": "a;odjif",
