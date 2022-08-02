@@ -23,13 +23,32 @@
       "email": "bruh@gmail.com",
       "password": "bruh",
       "id": 4
+    },
+    {
+      "name": "Bruh",
+      "email": "adn@gmail.com",
+      "password": "asdjfasdlkfj",
+      "id": 5
     }
   ],
   "restaurant": [
     {
+      "id": 1,
       "name": "Burger King",
       "contact": 123456789,
       "address": "123 Main St"
+    },
+    {
+      "name": "a;odjif",
+      "address": "lkjsaddflk",
+      "contact": "j",
+      "id": 2
+    },
+    {
+      "name": "laksdmf",
+      "address": "lkasjdf",
+      "contact": "l;kjasdf",
+      "id": 3
     }
   ]
 }
