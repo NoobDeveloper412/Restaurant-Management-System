@@ -2,7 +2,7 @@
 <template>
   <Header />
   <h1>Hello from Update Page</h1>
-   <form action="#" v-on:submit="updateRestaurant($event)" class="add_form">
+  <form action="#" v-on:submit="updateRestaurant($event)" class="add_form">
     <input
       type="text"
       name="name"
@@ -26,14 +26,14 @@
 </template>
 
 <script>
-import { Axios } from 'axios'
+import Axios from 'axios'
 import Header from './Header.vue'
 export default {
   name: 'Update-Page',
   components: {
     Header
   },
-    data () {
+  data () {
     return {
       restaurant: {
         name: '',
@@ -56,11 +56,16 @@ export default {
       }
     }
   },
-  mounted () {
+  async mounted () {
     let user = localStorage.getItem('userInfo')
     if (!user) {
       this.$router.push({ name: 'SignIn' })
     }
+    const restaurant = await Axios.get(
+      'http://localhost:3000/restaurant/' + this.$route.params.id
+    )
+    console.warn(restaurant)
+    this.restaurant = restaurant.data
   }
 }
 </script>
